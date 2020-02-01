@@ -1,0 +1,99 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+</html>
+
+- структура сайту
+
+задній фон
+
+body{
+background:blue url("1.png");
+background-size:50%; - розмір
+background-repeat:no-repeat; - щоб не повторювалось
+background-position:50% ; - позиція фону
+background-attachment:fixed; - не рухається при прокручуванні
+background:linear-gradient(to right, blue, navy,purple); градієнт
+}
+
+
+Маркований
+Типи
+square - квадрат
+circle - круг
+disk - замальований круг
+
+<ul type="square">
+<li>Елемент 1
+<li>Елемент 2
+<li> 
+<li>Елемент 4
+</ul>
+
+Нумерований
+Типи
+1- цифри
+i - маленькі римські
+I - великі римські
+a - маленькі літери
+A - великі літери
+
+<ol type="i">
+<li>Елемент 1
+<li>Елемент 2
+<li>
+<li>
+</ol>
+
+<hr width="50%" size="40px" color="yellow" align="left"> - лінія
+
+зображення 
+-3 разом
+<p align="center">
+<img src="1517496734-8689.jpg" width="400px">
+<img src="1517496734-8689.jpg" width="400px">
+<img src="1517496734-8689.jpg" width="400px"></p>
+
+щоб поставити біля тексту пишемо
+<img src="1517496734-8689.jpg" width="400px" align="left або right">
+
+
+
+Блоки 
+
+
+#text{
+color:whitesmoke;
+font-size:35px;
+font-family: 'Pacifico', cursive;
+}
+header{
+width:100%;
+height:50px; 
+background:black;
+position:fixed; - для прикріплення блоку при прокрутці
+top:0%; - координати
+left:0; - координати
+}
+#block1{width:100%;
+background:whitesmoke;
+height:400px;
+}
+#image{float:right; - ставить елемент на ліво або право, пусте місце заповнюється іншими елементами
+ margin-top;5px;- відступи}
+ margin-bottom:;
+ margin-left:;
+ margin-right:;
+ 
+</head>
+<body>
+<header></header>
+<div id="block1">asfasffsfsaasffasfas
+<div id="image"><img src="1.jpg" height="400px"></div>
+<div id="text">fsajiofasjiofsajoi</div>
+</div>
+
+https://fonts.google.com/ - де взяти шрифт
+https://htmlcolorcodes.com/ -rgb
