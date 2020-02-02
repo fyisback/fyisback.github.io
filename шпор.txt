@@ -1,0 +1,100 @@
+https://htmlcolorcodes.com/ - кольори
+https://fonts.google.com/ - шрифти
+<html>
+<head></head>
+<body></body>
+</html>
+
+<h1></h1>- Заголовок
+<p></p> - Абзац
+<br> - Новий рядок
+
+<title>Урок повторення</title> назва сторінка
+
+приклад ІД
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<title>Урок повторення</title>
+<style>
+h1{
+color:#A156B9 ;
+font-size:150px;
+font-family: 'Pacifico', cursive;
+}
+#v1{color:red;}
+#v2{color:green;}
+</style>
+</head>
+<body>
+<h1 align="center">Привіт</h1>
+<p id="v1" align="center">Варіант 1</p> 
+<p id="v2">Варіант 2</p>
+<br>
+</body>
+</html>
+ 
+Задній фон
+
+Зображення
+
+body{
+background:url("1517496734-8689.jpg");
+background-size:100%;
+background-attachment:fixed;
+
+}
+
+
+Колір 
+
+body{
+background:black;}
+
+Колір і зображення
+
+body{
+background:blue url("logo.png");
+background-size:50%; - розмір фону
+background-attachment:fixed; - щоб  фон не прокручувався
+background-repeat:no-repeat; - щоб фон не повторювався
+background-position:50%; - позиція фону
+
+}
+
+
+Зображення <img src="1517496734-8689.jpg" width="400px" height="300px">
+
+створення верхньої част
+
+блоки 
+
+#block1{width:100%;
+height:400px;
+
+background:white url("background1.png");
+background-repeat:no-repeat;margin-top:20px;
+background-position:right;}
+#block2{width:100%;
+height:400px;
+background:white;margin-top:20px;}
+a{text-decoration:none;color:white; background:#2B5AFA;
+padding:10px; font-size:20px;border-radius:20px;
+font-family: 'Roboto', sans-serif;}
+a:hover{color:#ECEEEC ;}
+</style>
+</head>
+<body>
+<header>
+SAMSUNG
+</header>
+
+
+<p align="center"><img src="1517496734-8689.jpg" width="400px" height="300px">
+<img src="1517496734-8689.jpg" width="400px" height="300px">
+<img src="1517496734-8689.jpg" width="400px" height="300px"></p>
+
+<div id="block1"><h1>Hello</h1>
+<a href="http://youtube.com">Завантажити</a> </div>
+<div id="block2"></div>
