@@ -98,3 +98,6 @@ SAMSUNG
 <div id="block1"><h1>Hello</h1>
 <a href="http://youtube.com">Завантажити</a> </div>
 <div id="block2"></div>
+
+
+ <link rel="shortcut icon" href="unnamed.png" type="image/x-icon"> - іконка 
