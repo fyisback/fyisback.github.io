@@ -1,0 +1,31 @@
+fonts.google.com -шрифти
+htmlcolorcodes.com - кольори
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Arimo|Pacifico&display=swap" rel="stylesheet">
+
+<style>
+p{
+color:#3FBFBF;
+font-size:200px; - розмір тексту
+font-family: 'Arimo', sans-serif;
+}
+h1{
+font-family: 'Pacifico', cursive; - шрифт
+}
+body{
+background:url("fon.jpg"); - картинка на задній фон
+background-size:100%; - розмір фону
+background-attachment:fixed; - щоб фон не рухався
+}
+</style> 
+</head>
+<body>
+<h1 align="center">Test</h1>
+<p>
+London is a capital of Great Britain
+</p>
+</body>
+
+</html>
