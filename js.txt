@@ -1,0 +1,22 @@
+alert("Hello world"); - вивід на екран
+let massage="Hello world"; - змінна
+let number=5;
+let number2=5.2;
+let result=number+number2;
+alert(result);
+alert("Ваше число "+a); - вивід тексту і змінної
+
+
+Числа
+Рядки
+
+let a=prompt("Введіть перше число"); - питання з відповіддю
+let b=prompt("Введіть друге число");
+let result1=+a + +b;
+let result2=+a - +b;
+		* - знак множення
+		/ - знак ділення
+alert("Додавання"+result1);
+alert("Віднімання"+result2);
+
+1 завд зробити калькулятор з відніманням,додаванням,множенням і діленням
