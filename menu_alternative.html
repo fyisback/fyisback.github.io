@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <style>
+        body{margin: 0;}
+        .button{
+            width: 50px;
+            height: 50px;
+            border:2px solid rgba(0,0,0,1);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.8);
+            border-radius: 50%;
+            top:20px;
+            left:20px;
+            display: block;
+            position: fixed;
+            transition: all 0.4s;
+            background: white;
+        }
+        span{
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: black;
+            top:50%;
+            margin-top:-1px;
+            left: 50%;
+            margin-left: -9px;
+       
+        }
+        span:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: black;
+            top:50%;
+            margin-top:-6px;
+            left: 50%;
+            margin-left: -9px;
+                 transition: all 0.4s;
+            
+        }
+        span:after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: black;
+            top:50%;
+            margin-top:4px;
+            left: 50%;
+            margin-left: -9px;
+             transition: all 0.4s;}
+        
+        .button-active span:before{
+            transform: rotate(-135deg);
+            transition: all 0.4s;
+            margin-top:0;
+        }
+        .button-active span:after{
+            
+            transform: rotate(135deg);
+            transition: all 0.4s;
+            margin-top:0;
+            
+        }
+        .button-active span{
+            
+            background: transparent;
+        }
+        .menu{
+            width: 100%;
+            height: 200px;
+            background: purple;
+            position: fixed;
+            top: -100%;
+           transition: all 1s;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            align-items: center;justify-content: center;
+        }
+        .menuactive{
+            transition: all 0.6s;
+            top: 0;
+        }
+        
+        .nav-btn{display: flex; transition: 0.8 all;
+        justify-content: center;  text-decoration: none;
+            align-items: center;
+            padding: 10px;
+        font-size: 18px;
+        width: 100%;
+        height: 40px;font-family: 'Roboto';
+                    color:whitesmoke;}
+        .nav-btn:hover{background:rgba(128,0,110,0.6);
+            transition: 0.8 all;
+
+        }
+     
+    </style>    
+        <script>
+     function help(){
+         elem = document.getElementById("menu");
+        if(!document.body.classList.contains("button-active")) {  document.body.classList.add('button-active');
+             elem.classList.add('menuactive');                                                          
+        }
+         else {  document.body.classList.remove('button-active'); elem.classList.remove('menuactive');  }
+     }
+    
+        </script>
+    </head>
+    <body>
+               <div class="menu " id="menu">
+        
+        <a href="#" class="nav-btn">Пункт</a>        
+        <a href="#" class="nav-btn">Пункт</a>        
+        <a href="#" class="nav-btn">Пункт</a>        
+        <a href="#" class="nav-btn">Пункт</a>        
+        
+        </div>
+        <a class="button" onclick="help()" >
+            <span></span>
+
+            
+            
+            </a>
+   
+        </body>
+    
+</html>
