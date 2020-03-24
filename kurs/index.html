@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style/animated.css">
+<script src="wow.min.js"></script>
+<script>
+    new WOW().init();
+    </script>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+<html>
+    <head>
+        <script>
+            function help(){
+                elem = document.getElementById("menu");
+               if(!document.body.classList.contains("button-active")) {  document.body.classList.add('button-active');
+                    elem.classList.add('menuactive');                                                          
+               }
+                else {  document.body.classList.remove('button-active'); elem.classList.remove('menuactive');  }
+            }
+            
+               </script>
+        <link rel="stylesheet" href="style/index_style.css">
+        <title>
+            Головна
+        </title>
+
+    </head>
+    <body>
+        <div class="menu " id="menu">
+        
+            <a href="#" class="nav-btn">Main</a>        
+            <a href="#" class="nav-btn">Tests</a>        
+            <a href="#" class="nav-btn">Profile</a>        
+       
+            </div>
+            <a class="button" onclick="help()" >
+                <span></span>
+    
+                
+                
+                </a>
+                <div class="user_info">
+                    
+                    <div class="user_name"><a href="#" class="info_button">User_Name</a></div>
+                    <img src="style/images/div_fon.jpg" class="avatar">
+                
+                        
+                </div>
+        <header>
+        <div class="wow bounceInLeft h">
+            <div>Study System</div>
+            <div >Enjoy new perfomance</div>
+        </div>
+        </header>
+        <div class="div1">
+            <h1 align="center">
+                Registration
+            </h1>
+            <div class="reg wow bounceInRight">
+                <form>
+                   <div class="reg_part">
+                       <label>Введіть e-mail</label><input type="email">
+                   </div>
+                    <div class="reg_part">
+                        <label>Введіть нікнейм</label><input type="text">
+                    </div class="reg_part">
+                    
+                    <div class="reg_part">
+                        <label>Введіть пароль</label><input type="password">
+                    </div>
+                    <div class="checkbox1">
+                        <div class="choose"><label>Student</label> <input type="radio" name="choose_role">
+                            </div>
+                        <div class="choose"><label>Teacher</label> <input type="radio" name="choose_role">
+                            </div>
+                        </div>
+                    <div class="reg_button">
+                        <button type="submit">Registration</button>
+                    </div>
+                    </form>
+
+            </div>
+        </div>
+    </body>
+
+</html>
