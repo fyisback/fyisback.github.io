@@ -1,0 +1,241 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+    }
+
+    .slider {
+        width: 100%;
+        height: 100vh;
+        background: url("1.png");
+        background-size: cover;
+    }
+
+    .numbers {
+        /* 03 */
+        display: flex;
+        align-items: center;
+
+
+
+        /* h2 */
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 30px;
+        /* identical to box height, or 83% */
+        text-align: center;
+        text-transform: uppercase;
+
+        /* FFFFFF */
+        color: #FFFFFF;
+
+        opacity: 0.5;
+    }
+
+    .top-left {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-left: 20px;
+    }
+
+    .textbox {
+        /* Technologie Intelligente - expertise dans les services en conseil stratégique, développement et maintenance des applications. */
+
+        width: 400px;
+        height: 72px;
+        margin-top: 20px;
+
+
+        /* other */
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 18px;
+        /* or 100% */
+
+        /* FFFFFF */
+        color: #FFFFFF;
+
+        opacity: 0.5;
+
+    }
+
+    .title {
+        /* Nos services */
+
+
+        /* h2 */
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 30px;
+        /* or 83% */
+        text-transform: uppercase;
+
+        /* FFFFFF */
+        color: #FFFFFF;
+
+    }
+
+    .main {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: top;
+        top: 57%;
+        left: 2%;
+
+    }
+
+    button {
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+    button:hover {
+        border: none;
+    }
+
+    .circle {
+        width: 6px;
+        margin-right: 4px;
+        height: 6px;
+        border: 0.5px solid grey;
+        border-radius: 50%;
+    }
+
+    .circle-active {
+        background: grey;
+    }
+
+    .bot-left {
+        display: flex;
+    }
+</style>
+<script>
+    let titles = [
+        "Vous<br>cherchez?", "Découvrez<br>Sigma Creative"
+        , "Nos<br>services"
+        , "Nous<br>recrutons"
+    ]
+    let textbox = [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et ",
+        "Technologie Intelligente - expertise dans les services en conseil stratégique, développement et maintenance des applications.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et "
+    ]
+    let value = 1;
+    function next_button() {
+
+        if (value >= 4) {
+
+            document.getElementById("circle" + value).classList.remove("circle-active");
+            value = 1;
+
+            document.getElementById("number").innerHTML = "0" + value;
+            document.getElementById("circle" + value).classList.add("circle-active");
+            document.getElementById("slider").style.backgroundImage = "url('" + value + ".png')";
+            document.getElementById("slider-title").innerHTML = titles[value - 1];
+            document.getElementById("slider-textbox").innerHTML=textbox[value-1];
+        }
+        else {
+            document.getElementById("circle" + value).classList.remove("circle-active");
+            value++;
+            document.getElementById("number").innerHTML = "0" + value;
+            document.getElementById("circle" + value).classList.add("circle-active");
+            document.getElementById("slider").style.backgroundImage = "url('" + value + ".png')";
+            document.getElementById("slider-title").innerHTML = titles[value - 1];
+            document.getElementById("slider-textbox").innerHTML=textbox[value-1];
+        }
+    }
+    function prev_button() {
+
+        if (value <= 1) {
+            document.getElementById("circle" + value).classList.remove("circle-active");
+            value = 4;
+            document.getElementById("number").innerHTML = "0" + value;
+            document.getElementById("circle" + value).classList.add("circle-active");
+            document.getElementById("slider").style.backgroundImage = "url('" + value + ".png')";
+            document.getElementById("slider-title").innerHTML = titles[value - 1];
+            document.getElementById("slider-textbox").innerHTML=textbox[value-1];
+        }
+        else {
+            document.getElementById("circle" + value).classList.remove("circle-active");
+            value--;
+            document.getElementById("number").innerHTML = "0" + value;
+            document.getElementById("circle" + value).classList.add("circle-active");
+            document.getElementById("slider").style.backgroundImage = "url('" + value + ".png')";
+            document.getElementById("slider-title").innerHTML = titles[value - 1];
+            document.getElementById("slider-textbox").innerHTML=textbox[value-1];
+        }
+    }
+
+
+</script>
+
+<body>
+    <div class="slider" id="slider">
+        <div class="main">
+            <div class="left">
+                <div class="top-left">
+                    <div class="numbers" id="number">01</div>
+                    <div class="arrows">
+                        <div class="top-arrow"><button onclick="next_button()"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path
+                                            d="M11.2951 9L6.7051 13.59C6.3151 13.98 6.3151 14.61 6.7051 15C7.0951 15.39 7.7251 15.39 8.1151 15L12.0051 11.12L15.8851 15C16.2751 15.39 16.9051 15.39 17.2951 15C17.6851 14.61 17.6851 13.98 17.2951 13.59L12.7051 9C12.3251 8.61 11.6851 8.61 11.2951 9Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bot-arrow"> <button onclick="prev_button()"> <svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.2">
+                                        <path
+                                            d="M12.7049 15L17.2949 10.41C17.6849 10.02 17.6849 9.39 17.2949 9C16.9049 8.61 16.2749 8.61 15.8849 9L11.9949 12.88L8.1149 9C7.7249 8.61 7.0949 8.61 6.7049 9C6.3149 9.39 6.3149 10.02 6.7049 10.41L11.2949 15C11.6749 15.39 12.3149 15.39 12.7049 15Z"
+                                            fill="white" />
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bot-left">
+
+                    <div class="circle circle-active" id="circle1"></div>
+                    <div class="circle" id="circle2"></div>
+                    <div class="circle" id="circle3"></div>
+                    <div class="circle" id="circle4"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title" id="slider-title">Vous<br>cherchez?</div>
+                <div class="textbox" id="slider-textbox">Technologie Intelligente - expertise dans les services en conseil strategique,
+                    developpement et maintenance des applications.</div>
+                <div class="slider-url"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
