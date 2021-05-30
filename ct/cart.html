@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="cart.css">
+        <script>
+             function help() {
+            elem = document.getElementById("menu");
+            if (!document.body.classList.contains("button-active")) {
+                document.body.classList.add('button-active');
+                elem.classList.add('menuactive');
+            }
+            else { document.body.classList.remove('button-active'); elem.classList.remove('menuactive'); }
+        }
+            function serviceWith(){
+                if(
+                document.getElementById("with").style.display=="none"){
+                    document.getElementById("without").style.display="none";
+                    
+                    document.getElementById("without_button").classList.remove("active");
+                    document.getElementById("with").style.display="block";
+                    document.getElementById("with_button").classList.add("active");
+
+                }
+            }
+            function serviceWithout(){
+                if(
+                document.getElementById("without").style.display=="none"){
+                    document.getElementById("with").style.display="none";
+                    document.getElementById("with_button").classList.remove("active");
+                    
+                    document.getElementById("without").style.display="block";
+                    document.getElementById("without_button").classList.add("active");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+
+            <div class="menu " id="menu">
+    
+                <a href="#" class="nav-btn">Пункт <img src="free-icon-facebook-logo-4406235.svg" class="icon_image"
+                        alt="ЗАПИС"></a>
+                <a href="#" class="nav-btn">Пункт <img src="free-icon-facebook-logo-4406235.svg" class="icon_image"></a>
+                <a href="#" class="nav-btn">Пункт <img src="free-icon-facebook-logo-4406235.svg" class="icon_image"></a>
+                <a href="#" class="nav-btn">Пункт <img src="free-icon-facebook-logo-4406235.svg" class="icon_image"></a>
+    
+            </div>
+            <a class="button" onclick="help()">
+                <span class="span_line"></span>
+    
+    
+    
+            </a>
+    
+        </header>
+        <div class="main">
+        <div class="services_change">
+            <a href="#" onclick="serviceWith()" class="active" id="with_button"  >Без контрасту</a>
+            <a href="#"  onclick="serviceWithout()" class="non_active" id="without_button" >З контрастом</a>
+        </div>
+        <div  id="without" class="without_layout">
+            <div class="without_heading">
+                <h2>Без контрасту</h2></div>
+                <div class="cards_layout">
+                    <div class="cards_column">
+                        <div class="card">
+                            <div class="card_image">
+                                <img src="CT.png">
+                            </div>
+                            <div class="card_description">опис</div>
+                            <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image">
+                                <img src="CT.png">
+                            </div>
+                            <div class="card_description">опис</div>
+                            <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image">
+                                <img src="CT.png">
+                            </div>
+                            <div class="card_description">опис</div>
+                            <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image">
+                                <img src="CT.png">
+                            </div>
+                            <div class="card_description">опис</div>
+                            <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                        </div>
+                    </div>
+                    <div class="cards_column ">
+                    <div class="card column_down">
+                        <div class="card_image">
+                            <img src="CT.png">
+                        </div>
+                        <div class="card_description">опис</div>
+                        <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                    </div>
+                    <div class="card column_down">
+                        <div class="card_image">
+                            <img src="CT.png">
+                        </div>
+                        <div class="card_description">опис</div>
+                        <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                    </div>
+                    <div class="card column_down">
+                        <div class="card_image">
+                            <img src="CT.png">
+                        </div>
+                        <div class="card_description">опис</div>
+                        <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                    </div>
+                    <div class="card column_down">
+                        <div class="card_image">
+                            <img src="CT.png">
+                        </div>
+                        <div class="card_description">опис</div>
+                        <div class="card_link"><a href="#" class="card_button">kink</a></div>
+                    </div>
+                    </div>
+                  </div>
+        <div  id="without" style="display:none;">22222</div>
+    </div>
+    </body>
+    </html>
