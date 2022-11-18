@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>UX A/B testing</title>
+        <style>
+            body{display: flex;
+                flex-direction: column;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace;
+        align-items: center;}
+            .guide{
+                display:flex;
+                width: 80vw;;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .step{display: flex;
+            align-items: center;}
+            code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1 align="center">UX A/B testing guide</h1>
+        <div class="guide">
+           <div class="step">
+                <h2>1. Click on the "Choose elements" button (marked in yellow) and put "head" inside the text fiels (marked as green).</h2>
+                <img src="guide_1.png" alt="Step 1"/>
+            </div>
+            <div class="step">
+                <div><h2>2. In this section, click the Add Variable button and select JavaScript. Add this piece of code (remain the same for all products)</h2>
+                <code>
+                var priceSpiderAB=document.createElement("script");<br>
+                    priceSpiderAB.type="text/javascript"<br>
+                    priceSpiderAB.src="//cdn.pricespider.com/1/lib/ps-widget.js"<br>
+                    priceSpiderAB.async = true;<br>
+                    document.body.appendChild(priceSpiderAB);
+                </code>
+            </div>
+            <img src="guide_2.png" width='50%'>
+            </div>
+            <div class="step">
+                <div>
+                <h2>
+                    3. Now click the Add Variable button and select the HTML. Add this piece of code (remain the same for all products)
+                </h2>
+                <code>
+                    &lt;meta name="ps-key" content="5979-635c39afca9fd0000e78d6ab"&gt;<br>
+                    &lt;meta name="ps-country" content="MX"&gt;<br>
+                    &lt;meta name="ps-language" content="mx"&gt;
+                </code>
+                
+                </div>
+                <img src="guide_3.png" width='50%'>
+            </div>
+            <div class="step">
+                <div>
+                <h2>4. Now we need to add a button. Place the div where you want to see the "Where to buy" button. Inside the "ps-sku" attribute put unique SKU code for the product  </h2>
+                <code>
+                    &lt;div class="ps-widget" ps-sku="[SKU value liveshere]"&gt;&lt;/div&gt;
+                </code>
+                </div>
+                <img src="guide_4.png" width='50%'>
+            </div>
+        </div>
+        <h2 style="font-size:40px" align="center">PROFIT!</h2>
+    </body>
+</html>
